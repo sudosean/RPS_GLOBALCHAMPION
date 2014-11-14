@@ -1,7 +1,9 @@
 RPS_GLOBALCHAMPION
 ==================
 About:
+<br>
 ERD:
+<br>
 Wireframe: 
 * Game play: single screen play out
 * Pages/views: Game(Root) page, sign-up page, profile page
