@@ -1,7 +1,8 @@
 RPS_GLOBALCHAMPION
 ==================
 About:
-
+ERD:
+Wireframe: 
 * Game play: single screen play out
 * Pages/views: Game(Root) page, sign-up page, profile page
 * Color Scheme:
