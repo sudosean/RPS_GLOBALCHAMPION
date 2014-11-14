@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+// My files
+ // @import "main";
+ // @import "mixins";
+ 
+// Font Awesome
+ @import "fontawesome/scss/variables";
+ @import "fontawesome/scss/mixins";
+ @import "fontawesome/scss/path";
+ @import "fontawesome/scss/core";
+ @import "fontawesome/scss/larger";
+ @import "fontawesome/scss/fixed-width";
+ @import "fontawesome/scss/list";
+ @import "fontawesome/scss/bordered-pulled";
+ @import "fontawesome/scss/spinning";
+ @import "fontawesome/scss/rotated-flipped";
+ @import "fontawesome/scss/stacked";
+ @import "fontawesome/scss/icons";
+
+// Bootstrap
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
+@import 'bootstrap-datetimepicker';
+
+// Core variables and mixins
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
+
+// Reset
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/print";
+
+// Core CSS
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/glyphicons";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/dropdowns";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navs";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/breadcrumbs";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/pagination";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/pager";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/labels";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/jumbotron";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/thumbnails";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/alerts";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/progress-bars";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/media";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/list-group";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/panels";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/wells";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/modals";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tooltip";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/popovers";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/responsive-utilities";
