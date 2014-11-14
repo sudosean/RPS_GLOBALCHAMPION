@@ -1,0 +1,24 @@
+{
+  "name": "Global Champion",
+  "version": "0.0.0",
+  "homepage": "https://github.com/seanlarge/RPS_GLOBALCHAMPION",
+  "authors": [
+    "johnelliott <johnelliott703@gmail.com>"
+  ],
+  "description": "Team Project",
+  "keywords": [
+    "game"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "fontawesome": "~4.2.0",
+    "bootstrap-sass-official": "~3.3.1"
+  }
+}
