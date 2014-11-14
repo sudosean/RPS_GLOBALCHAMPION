@@ -1,6 +1,6 @@
 RPS_GLOBALCHAMPION
 ==================
-
+Color Scheme:
 
 Technologies:
 Ruby,
