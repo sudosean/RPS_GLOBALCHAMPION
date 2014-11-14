@@ -1,0 +1,2 @@
+RPS_GLOBALCHAMPION
+==================
