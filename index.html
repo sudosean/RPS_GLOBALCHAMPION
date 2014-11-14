@@ -20,11 +20,13 @@
                 <input type="submit" name="submit">
             </form>
             <br>
-            <button id='play'class="btn" name="button">Rock</button>
-            <button id='play'class="btn" name="button">Paper</button>
-            <button id='play'class="btn" name="button">Scissors</button>
+            <button onClick='choose("rock")'class='btn'>Rock</button>
+            <button onClick='choose("paper")'class='btn'>Paper</button>
+            <button onClick='choose("scissors")'class='btn'>Scissors</button>
             <br>
+            <button onClick='compare(user, computerChoice)'>Go!</button>
             <br>
+            <p id="result"></p>
             <br>
             <h3> (Battle scene plays out) </h3>
             <br>
