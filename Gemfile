@@ -39,6 +39,13 @@ gem 'devise'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :test do
+  gem 'capybara'
+  gem 'minitest'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+end
+
 group :development do
   gem 'guard'
   gem 'guard-livereload', require: false
