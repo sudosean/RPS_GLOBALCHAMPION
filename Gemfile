@@ -47,6 +47,7 @@ group :test do
 end
 
 group :development do
+  gem 'jasmine-rails'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
