@@ -14,3 +14,4 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sass-official/assets/javascripts/bootstrap.js
+//= require rps.js
