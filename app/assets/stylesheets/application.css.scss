@@ -13,9 +13,10 @@
  */
 
 // Global Champion files
-// @import "main";
-// @import "mixins";
- 
+@import "main";
+@import "mixins";
+@import "variables";
+
 // Font Awesome
 @import "fontawesome/scss/variables";
 @import "fontawesome/scss/mixins";
@@ -34,7 +35,7 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap-sprockets";
 
 // Core variables and mixins
-@import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
+// @import "bootstrap-sass-official/assets/stylesheets/bootstrap/variables";
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins";
 
 // Reset
