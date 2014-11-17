@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :rounds, only: [:show, :update]
+
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   devise_for :users
   resources :main

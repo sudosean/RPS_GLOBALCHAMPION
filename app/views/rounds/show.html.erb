@@ -1,0 +1,10 @@
+<h1>Rounds#show</h1>
+<p>Find me in app/views/rounds/show.html.erb</p>
+
+
+<% player_number = @round.player_number(current_user) %>
+<% hand_column = "player_#{player_number}_hand" %>
+<%= form_for @round do |f| %>
+    <%= f.hidden_field hand_column, value: "rock"  %>
+  <%= f.submit "Rock" %>
+<% end %>
