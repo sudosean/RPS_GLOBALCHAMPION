@@ -1,3 +1,29 @@
-#rock {
+#choices {
   @extend .col-md-12;
+}
+// #rock_img {
+//   @include background-image: url(circle.png);
+// }
+#go_button {
+  @extend .col-md-12;
+}
+
+.login {
+  background: #FFCC99;
+  // position: absolute;
+  // left: 50%;
+  // margin-left: -200px;
+  text-align: center;
+}
+.weapons{
+  background: #FF9999;
+  text-align: center;
+}
+.playagain {
+  background: #FFCC66;
+  text-align: center;
+}
+
+.navbar {
+  background: #000000;
 }
