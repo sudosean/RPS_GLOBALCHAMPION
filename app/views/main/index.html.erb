@@ -11,16 +11,12 @@
                 <input type="submit" name="submit">
             </form>
             <br>
-            <button onClick='choose("rock")'class='btn'>Rock</button>
-            <button onClick='choose("paper")'class='btn'>Paper</button>
-            <button onClick='choose("scissors")'class='btn'>Scissors</button>
-            <br>
-            <button onClick='compare(user, computerChoice)'>Go!</button>
-            <br>
+            <button onClick='choose("rock"); compare(user, computerChoice); window.location.reload(true);'class='btn'>Rock</button>
+            <button onClick='choose("paper"); compare(user, computerChoice); window.location.reload(true);'class='btn'>Paper</button>
+            <button onClick='choose("scissors"); compare(user, computerChoice); window.location.reload(true);'class='btn'>Scissors</button>
+           
             <!-- javascript in html tags need to be refactored(separation of concerns) also, logic in Play again bttn wipes data from the page and reloads the page. need to refactor. -->
-            <br>
-            <button onClick='window.location.reload(true)' class="btn" name="button">Play Again</button>
-            <br>
+         
             <p id="result"></p>
             <br>
             <br>
