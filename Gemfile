@@ -40,14 +40,20 @@ gem 'devise'
 # gem 'debugger', group: [:development, :test]
 
 group :test do
+  gem 'selenium-webdriver'
+  # gem 'minitest-rails'
+  # gem 'minitest-spec-rails'
+  # gem 'capybara_minitest_spec'
+  gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'minitest'
-  gem 'minitest-rails-capybara'
-  gem 'minitest-reporters'
+  # gem 'minitest-rails-capybara'
+  # gem 'minitest-reporters'
 end
 
 group :development do
   gem 'jasmine-rails'
+  gem 'rspec-rails', '~> 3.0'
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
