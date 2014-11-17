@@ -5,3 +5,13 @@ describe "hello world", js: true do
     expect(page).to have_content('Global Champion')
   end
 end
+
+describe "mini game", js: true do
+  it "Clicks 'rock' and gets a response" do
+    visit '/main'
+    click_on "rock_button"
+    expect(page).to have_content('!')
+  end
+end
+
+describe ""
