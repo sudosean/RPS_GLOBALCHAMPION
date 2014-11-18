@@ -3,8 +3,7 @@ class RoundsController < ApplicationController
     @round = Round.find(params[:id])
   end
 
-
-def update
+  def update
     round = Round.find(params[:id])
     round.update!(round_params)
     redirect_to round
