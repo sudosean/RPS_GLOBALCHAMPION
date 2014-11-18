@@ -1,10 +1,24 @@
 require 'rails_helper'
 
 describe "Round" do
-  describe "player_number" do
+  describe "when neither player has selected a hand" do
     round = Round.new
-    it "should return 1" do
-      expect(round.player_number('thisdoesntmatter')).to equal(1)
+    it "should return waiting" do
+      expect(round.status).to eq('waiting')
     end
-  end
-end
+  end # end of describe
+  describe "When both players choose a hand" do
+    round = Round.new
+    round.update(player_1_hand: "rock", player_2_hand: "scissors")
+    it "should return complete" do
+      expect(round.status).to eq('complete')
+    end
+  end # end of second describe
+  describe "When only one player has a hand played" do
+    round = Round.new
+    round.update(player_2_hand: "scissors")
+    it "should return waiting" do
+      expect(round.status).to eq('waiting')
+    end
+  end # end of third describe
+end # end of describe round
