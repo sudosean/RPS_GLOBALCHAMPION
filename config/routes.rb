@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :profiles
+
   resources :rounds, only: [:show, :update]
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
