@@ -1,23 +1,124 @@
     $(document).ready(function() {
 
-        $('#movedown').click(function() {
-            $('#textbox').animate({
+        $('#rock_button').click(function() {
+            $('#result').text('');
+            $('#fist_back').animate({
                 'marginTop': "+=30px",
             });
-            $('#textbox').animate({
-                'marginTop': "-=30px"
-            });
-            $('#textbox').animate({
+            $('#fist_front').animate({
                 'marginTop': "+=30px",
             });
-            $('#textbox').animate({
+            $('#fist_back').animate({
                 'marginTop': "-=30px"
             });
-            $('#textbox').animate({
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
                 'marginTop': "+=30px",
             });
-            $('#textbox').animate({
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
                 'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+        });
+    });
+
+   $(document).ready(function() {
+        $('#paper_button').click(function() {
+        $('#result').text('');
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+        });
+    });$(document).ready(function() {
+        $('#scissors_button').click(function() {
+        $('#result').text('');
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_front').animate({
+                'marginTop': "+=30px",
+            });
+            $('#fist_back').animate({
+                'marginTop': "-=30px"
+            });
+            $('#fist_front').animate({
+                'marginTop': "-=30px",
             });
         });
     });

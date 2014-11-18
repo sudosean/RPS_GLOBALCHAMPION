@@ -3,11 +3,14 @@ var choose = function(choice) {
     user = choice;
 }
 
+
 var refreshPage = function(choice) {
     choose(choice); 
-    compare(user, computerChoice);
-    setTimeout(function() { window.location.reload(true) },2000); //makes response stay on page, instead of going away
+    setTimeout(function() {
+        compare(user, computerChoice);
+    } , 2600); //makes response stay on page, instead of going away
 }
+
 var computerChoice = Math.random();
     if (computerChoice < 0.34) {
         computerChoice = "rock";
