@@ -1,4 +1,4 @@
-require "spec_helper"
+require "rails_helper"
 describe "hello world", js: true do
   it "visits the root path" do
     visit '/main'
@@ -13,5 +13,3 @@ describe "mini game", js: true do
     expect(page).to have_content('!')
   end
 end
-
-describe ""

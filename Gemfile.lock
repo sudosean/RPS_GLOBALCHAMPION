@@ -221,7 +221,6 @@ DEPENDENCIES
   jasmine-rails
   jbuilder (~> 2.0)
   jquery-rails
-  minitest
   pg
   pry-rails
   rack-livereload
