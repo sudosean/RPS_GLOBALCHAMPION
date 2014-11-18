@@ -2,7 +2,7 @@
 <p>Find me in app/views/rounds/show.html.erb</p>
 
 <!-- case statement for  -->
-
+<h2 id="result"></h2>
 <% case @round.status %>
   <% when "input" %>
     <!-- do this, but make partial later -->
@@ -14,6 +14,8 @@
     <% end %>
   <% when "waiting" %>
     <p>waiting for other player</p>
-  <% when "completed" %>
-    <p>complete!</p>
+  <% when "complete" %>
+    <script>
+      compare('<%= @round.player_1_hand %>', '<%= @round.player_2_hand %>');
+    </script>
 <% end -%>
