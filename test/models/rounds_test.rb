@@ -1,9 +1,14 @@
 require "test_helper"
 
-describe Rounds do
-  let(:rounds) { Rounds.new }
+describe Round do
+  let(:round) { Round.new }
 
   it "must be valid" do
-    rounds.must_be :valid?
+    round.must_be :valid?
   end
+
+  it "should show a status of 'waiting'" do
+    ro
+  end
+
 end
