@@ -10,10 +10,6 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-extend MiniTest::Spec::DSL
-  register_spec_type self do |desc|
-    desc < ActiveRecord::Base if desc.is_a? Class
-  end
   # MiniTest::Spec
   # class MiniTest::Spec
   #   include FactoryGirl::Syntax::Methods
