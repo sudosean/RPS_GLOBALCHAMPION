@@ -9,6 +9,23 @@ class RoundsController < ApplicationController
     redirect_to round
   end
 
+  def new
+    open_round = Round.open.first
+    if open_round
+      # join a round
+      open_round.update(player_2: current_user)
+      @round = open_round
+    else
+      # else create a round
+      @round = Round.new
+      unless @round.save(player_1: current_user)
+        #TODO: render with errors
+      end
+    end
+    # redirect to show
+    redirect_to @round
+  end
+
   private
     # Using a private method to encapsulate the permissible parameters
     # is just a good pattern since you'll be able to reuse the same
