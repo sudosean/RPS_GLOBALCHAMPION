@@ -41,6 +41,8 @@
                 </a>
             </div>
 
+            
+
             <!-- These are the buttons 'sign up and log in' -->
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -97,11 +99,11 @@
 
             <div id="choices">
 
-                <button onClick='refreshPage("rock");'class='btn'><img src="assets/RockImg.jpeg"></button>
+                <button onClick='refreshPage("rock");' delay'' class='btn' id="rock_button"><img src="assets/RockImg.jpeg"></button>
                 
-                <button onClick='refreshPage("paper");'class='btn'><img src="assets/PaperImg.jpeg"></button>
+                <button onClick='refreshPage("paper");'class='btn' id="paper_button"><img src="assets/PaperImg.jpeg"></button>
                 
-                <button onClick='refreshPage("scissors");'class='btn'><img src="assets/ScissorsImg.jpeg"></button>
+                <button onClick='refreshPage("scissors");'class='btn' id="scissors_button"><img src="assets/ScissorsImg.jpeg"></button>
             </div>
 
             <br>
@@ -120,7 +122,14 @@
             <p id="result"></p>
            <br>
             <!-- <button class="btn" name="button">Sign up</button> -->
-
+            <div id="arms-container">
+                <div id="left-arm">
+                    <img id="fist_back" src="assets/fist_back-01.png" alt="left arm">
+                </div>
+                <div id="right-arm">
+                    <img id="fist_front" src="assets/fist_front-01.png" alt="right arm">
+                </div>
+            </div>
 
             <br>
             <br>
