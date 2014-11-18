@@ -27,3 +27,25 @@
 .navbar {
   background: #000000;
 }
+
+#arms-container {
+  background-color: red;
+  height: 470px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+#left-arm img {
+  background-color: green;
+  float: left;
+  height: 470px;
+  width: 450px;
+
+}
+
+#right-arm img{
+  background-color: blue;
+  float: right;
+  height: 470px;
+  width: 450px;
+}
