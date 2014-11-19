@@ -38,6 +38,9 @@
             $('#fist_front').animate({
                 'marginTop': "-=30px",
             });
+            // $('#fist_front').replaceWith(
+            //     "<h2>New heading</h2>"
+            //     );
         });
     });
 
