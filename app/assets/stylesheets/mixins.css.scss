@@ -1,6 +1,3 @@
-#brand {
-  font-size: 30px;
-}
 #choices {
   @extend .col-md-12;
 }
@@ -11,49 +8,28 @@
   @extend .col-md-12;
 }
 
-.login {
-  // background: #FFCC99;
-  // position: absolute;
-  // left: 50%;
-  // margin-left: -200px;
-  text-align: center;
-}
-.weapons{
-  // background: #FF9999;
-  text-align: center;
-}
-.playagain {
-  // background: #FFCC66;
-  text-align: center;
+.weapons {
+  @extend .row;
 }
 
-.navbar {
-  background: #000000;
+.notice {
+  @extend .alert;
+  @extend .alert-info;
+}
+
+.alert {
+  @extend .alert; 
+  @extend .alert-warning;
 }
 
 #arms-container {
-  background-color: red;
-  height: 470px;
-  width: 900px;
-  margin: 0 auto;
+  @extend .row;
 }
 
-#left-arm img {
-  // background-color:;
-  float: left;
-  height: 470px;
-  width: 450px;
-
+.results-container {
+  @extend .row;
 }
 
-#right-arm img{
-  // background-color: ;
-  float: right;
-  height: 470px;
-  width: 450px;
-}
-
-#choices img {
-  height: 200px;
-  width: 150px;
+.devise-alert {
+  @extend .row;
 }
