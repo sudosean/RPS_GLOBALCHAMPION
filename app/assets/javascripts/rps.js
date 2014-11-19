@@ -8,7 +8,9 @@ var refreshPage = function(choice) {
     choose(choice);
     setTimeout(function() {
         compare(user, makeComputerChoice());
-    }, 2600); //makes response stay on page, instead of going away
+    }, 2600);//makes response stay on page, instead of going away
+    document.getElementById("fist_back").src="assets/fist_back-01.png"; 
+    document.getElementById("fist_front").src="assets/fist_front-01.png";
 }
 
 
