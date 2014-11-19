@@ -1,3 +1,4 @@
+
 <!-- case statement for  -->
 <h2 id="result"></h2>
 <% player_number = @round.player_number(current_user) %>
@@ -7,15 +8,15 @@
     <!-- do this, but make partial later -->
     <%= form_for @round do |f| %>
       <%= f.hidden_field hand_column, value: "rock"  %>
-      <%= f.submit "Rock" %>
+      <%= image_submit_tag "luchador_rock.png", onClick: 'refreshPage("rock");', :class => 'btn', id: "rock_button", alt: "Rock" %>
     <% end %>
     <%= form_for @round do |f| %>
       <%= f.hidden_field hand_column, value: "paper"  %>
-      <%= f.submit "paper" %>
+      <%= image_submit_tag "luchador_paper.png", onClick: 'refreshPage("paper");', :class => 'btn', id: "paper_button", alt: "Paper" %>
     <% end %>
     <%= form_for @round do |f| %>
       <%= f.hidden_field hand_column, value: "scissors"  %>
-      <%= f.submit "scissors" %>
+      <%= image_submit_tag "luchador_scissors.png", onClick: 'refreshPage("scissors");', :class => 'btn', id: "scissors_button", alt: "Scissors" %>
     <% end %>
   <% when "waiting" %>
     <p>waiting for other player</p>
