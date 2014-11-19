@@ -5,13 +5,17 @@ var choose = function(choice) {
 
 
 var refreshPage = function(choice) {
-    choose(choice); 
+    choose(choice);
     setTimeout(function() {
-        compare(user, computerChoice);
-    } , 2600); //makes response stay on page, instead of going away
+        compare(user, makeComputerChoice());
+    }, 2600); //makes response stay on page, instead of going away
 }
 
-var computerChoice = Math.random();
+
+var computerChoice = makeComputerChoice();
+
+function makeComputerChoice() {
+    var computerChoice = Math.random();
     if (computerChoice < 0.34) {
         computerChoice = "rock";
     } else if (computerChoice < 0.67) {
@@ -19,6 +23,10 @@ var computerChoice = Math.random();
     } else {
         computerChoice = "scissors";
     }
+    return computerChoice;
+}
+
+
 
 
 var compare = function(choice1, choice2) {
