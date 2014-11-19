@@ -10,6 +10,9 @@
 
 .weapons {
   @extend .row;
+  // #choices {
+  //   @extend .col-md-12;
+  // }
 }
 
 .notice {
@@ -22,14 +25,40 @@
   @extend .alert-warning;
 }
 
-#arms-container {
+.arms-container {
   @extend .row;
+  .left-arm, .right-arm {
+    @extend .col-xs-6;
+  }
 }
 
 .results-container {
   @extend .row;
+  #result {
+    @extend .col-xs-12;
+  }
 }
 
 .devise-alert {
   @extend .row;
 }
+
+img {
+  @extend .img-responsive;
+}
+
+.rock_button{
+  @extend .col-xs-4;
+}
+.paper_button{
+  @extend .col-xs-4;
+}
+.scissors_button{
+  @extend .col-xs-4;
+}
+
+.headline {
+  @extend .col-xs-12
+  ;
+}
+
