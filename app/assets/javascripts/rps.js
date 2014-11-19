@@ -8,7 +8,9 @@ var refreshPage = function(choice) {
     choose(choice);
     setTimeout(function() {
         compare(user, makeComputerChoice());
-    }, 2600); //makes response stay on page, instead of going away
+    }, 2600);//makes response stay on page, instead of going away
+    document.getElementById("fist_back").src="assets/fist_back-01.png"; 
+    document.getElementById("fist_front").src="assets/fist_front-01.png";
 }
 
 
@@ -29,26 +31,48 @@ function makeComputerChoice() {
 
 
 
-var compare = function(choice1, choice2) {
+var compare = function(choice1, choice2) {   //choice 1 = user, choice 2 = computer
     if (choice1 === choice2) {
         document.getElementById("result").innerHTML = "Tie!";
+        if (choice1 === "rock" && choice2 === "rock") {
+            document.getElementById("fist_back").src="assets/luchador_rock.png";
+            document.getElementById("fist_front").src="assets/luchador_rock.png";
+        } else if (choice1 === "paper" && choice2 === "paper"){
+            document.getElementById("fist_back").src="assets/luchador_paper.png";
+            document.getElementById("fist_front").src="assets/luchador_paper.png";
+        } else {
+            document.getElementById("fist_back").src="assets/luchador_scissors.png";
+            document.getElementById("fist_front").src="assets/luchador_scissors.png";
+        }
     } else if (choice1 === "rock") {
         if (choice2 === "scissors") {
             document.getElementById("result").innerHTML = "You Win!";
+            document.getElementById("fist_back").src="assets/luchador_rock.png";     //user choice rock
+            document.getElementById("fist_front").src="assets/luchador_scissors.png"; //computer choice scissors
         } else {
             document.getElementById("result").innerHTML = "You Lose!";
+            document.getElementById("fist_back").src="assets/luchador_rock.png";   //user choice rock
+            document.getElementById("fist_front").src="assets/luchador_paper.png"; //computer choice paper
         }
     } else if (choice1 === "paper") {
         if (choice2 === "rock") {
             document.getElementById("result").innerHTML = "You Win!";
+            document.getElementById("fist_back").src="assets/luchador_paper.png";  //user choice paper
+            document.getElementById("fist_front").src="assets/luchador_rock.png";  //computer choice rock
         } else if (choice2 === "scissors") {
             document.getElementById("result").innerHTML = "You Lose!";
+            document.getElementById("fist_back").src="assets/luchador_paper.png";     //user choice paper
+            document.getElementById("fist_front").src="assets/luchador_scissors.png";  //computer choice scissors
         }
     } else if (choice1 === "scissors") {
         if (choice2 === "rock") {
-            document.getElementById("result").innerHTML = "You Lose!";
+            document.getElementById("result").innerHTML = "You Lose!";                  
+            document.getElementById("fist_back").src="assets/luchador_scissors.png";    //user choice scissors
+            document.getElementById("fist_front").src="assets/luchador_rock.png";       //computer choice rock
         } else if (choice2 === "paper") {
-            document.getElementById("result").innerHTML = "You Win!";
+            document.getElementById("result").innerHTML = "You Win!";                   
+            document.getElementById("fist_back").src="assets/luchador_scissors.png";    //user choice scissors
+            document.getElementById("fist_front").src="assets/luchador_paper.png";      //computer choice paper        
         }
     } else {
         document.getElementById("result").innerHTML = "ERROR!";
