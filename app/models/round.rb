@@ -25,8 +25,4 @@ class Round < ActiveRecord::Base
     Round.open.first
   end
 
-<<<<<<< HEAD
-end
-=======
 end # end of class
->>>>>>> master
