@@ -1,31 +1,4 @@
 <h1>Rounds#show</h1>
 <p>Find me in app/views/rounds/show.html.erb</p>
 
-<!-- case statement for  -->
-<h2 id="result"></h2>
-<% player_number = @round.player_number(current_user) %>
-    <% hand_column = "player_#{player_number}_hand" %>
-<% case @round.status %>
-  <% when "input" %>
-    <!-- do this, but make partial later -->
-    <%= form_for @round do |f| %>
-      <%= f.hidden_field hand_column, value: "rock"  %>
-      <%= f.submit "Rock" %>
-    <% end %>
-    <%= form_for @round do |f| %>
-      <%= f.hidden_field hand_column, value: "paper"  %>
-      <%= f.submit "paper" %>
-    <% end %>
-    <%= form_for @round do |f| %>
-      <%= f.hidden_field hand_column, value: "scissors"  %>
-      <%= f.submit "scissors" %>
-    <% end %>
-  <% when "waiting" %>
-    <p>waiting for other player</p>
-  <% when "complete" %>
-    <% other_player_number = ((player_number == 1) ? 2 : 1) %>
-    <% other_player_hand = "player_#{other_player_number}_hand" %>
-    <script>
-      compare('<%= @round.send(hand_column) %>', '<%= @round.send(other_player_hand) %>');
-    </script>
-<% end -%>
+<%= render "layouts/multiplayer_choices" %>
