@@ -1,4 +1,6 @@
 class RoundsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @round = Round.find(params[:id])
   end
@@ -17,8 +19,8 @@ class RoundsController < ApplicationController
       @round = open_round
     else
       # else create a round
-      @round = Round.new
-      unless @round.save(player_1: current_user)
+      @round = Round.new(player_1: current_user)
+      unless @round.save!
         #TODO: render with errors
       end
     end
