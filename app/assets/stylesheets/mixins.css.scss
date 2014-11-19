@@ -1,5 +1,10 @@
+
+  .headline {
+    @extend .text-center;
+  }
 #choices {
   @extend .col-md-12;
+
 }
 // #rock_img {
 //   @include background-image: url(circle.png);
@@ -29,13 +34,19 @@
   @extend .row;
   .left-arm, .right-arm {
     @extend .col-xs-6;
+
+    #fist-front, #fist-back{
+        @extend .center-block;
+    }
   }
+
 }
 
 .results-container {
   @extend .row;
   #result {
     @extend .col-xs-12;
+    @extend .text-center;
   }
 }
 
