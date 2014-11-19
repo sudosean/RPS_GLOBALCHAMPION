@@ -20,7 +20,6 @@ class RoundsController < ApplicationController
     else
       # else create a round
       @round = Round.new(player_1: current_user)
-      debugger
       unless @round.save!
         #TODO: render with errors
       end
