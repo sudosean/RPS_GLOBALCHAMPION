@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   resources :profiles
 
   resources :rounds, only: [:show, :update]
+=======
+  resources :rounds, only: [:show, :update, :new]
+>>>>>>> master
 
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   devise_for :users

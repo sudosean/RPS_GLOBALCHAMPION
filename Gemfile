@@ -58,6 +58,7 @@ group :development do
   gem 'pry-rails'
   gem 'jasmine-rails'
   gem 'guard'
+  gem 'guard-rspec', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'rb-readline'
