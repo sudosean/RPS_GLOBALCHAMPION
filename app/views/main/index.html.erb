@@ -1,35 +1,21 @@
-
-
-
-    <!-- test delete before final -->
-
-
-        <div class="weapons">
-            <div class="choices">
-                <h1 class="headline">Choose your weapon!</h1>
-
-                <button onClick='refreshPage("rock");' delay'' class='btn' id="rock_button"><img src="assets/luchador_rock.png"></button>
-
-                <button onClick='refreshPage("paper");'class='btn' id="paper_button"><img src="assets/luchador_paper.png"></button>
-
-                <button onClick='refreshPage("scissors");'class='btn' id="scissors_button"><img src="assets/luchador_scissors.png"></button>
-            </div>
-        </div>
-            <!-- javascript in html tags need to be refactored(separation of concerns) also, logic in Play again bttn wipes data from the page and reloads the page. need to refactor. -->
-            <!-- <button onClick='window.location.reload(true)' class="btn" name="button">Play Again</button> -->
-            <div class="results-container">
-            <p id="result"></p>
-            </div>
-            <!-- <button class="btn" name="button">Sign up</button> -->
-            <div class="arms-container">
-                <div class="left-arm">
-                    <img id="fist_back" src="assets/fist_back-01.png" alt="left arm">
-                </div>
-                <div class="right-arm">
-                    <img id="fist_front" src="assets/fist_front-01.png" alt="right arm">
-                </div>
- 
-        </div>
+<div class="weapons">
+    <h1 class="headline">Choose your weapon!</h1>
+    <%= render "layouts/choices" %>
+</div>
+<!-- javascript in html tags need to be refactored(separation of concerns) also, logic in Play again bttn wipes data from the page and reloads the page. need to refactor. -->
+<!-- <button onClick='window.location.reload(true)' class="btn" name="button">Play Again</button> -->
+<div class="results-container">
+    <p id="result"></p>
+</div>
+<!-- <button class="btn" name="button">Sign up</button> -->
+<div class="arms-container">
+    <div class="left-arm">
+        <img id="fist_back" src="assets/fist_back-01.png" alt="left arm">
     </div>
+    <div class="right-arm">
+        <img id="fist_front" src="assets/fist_front-01.png" alt="right arm">
+    </div>
+
+</div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
