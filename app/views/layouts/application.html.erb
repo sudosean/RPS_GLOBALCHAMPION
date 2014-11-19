@@ -1,16 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>RPSGlobalchampion</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Global Champion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>RPSGlobalchampion</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
- <p class="notice"><%= notice %></p>
- <p class="alert"><%= alert %></p>
-<%= yield %>
+		<!-- Begin Navigation Bar HTML -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="top">
+			<div class="container">
+				<div class="navbar-header">
 
-</body>
-</html>
+					<!-- This is the hamburger button that appaears on the right hand side when window gets smaller-->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- End hamburger button -->
+
+					<a class="navbar-brand" href="#">
+						<p class="brand">Global Champion</p>
+					</a>
+				</div>
+
+
+
+				<!-- These are the buttons 'sign up and log in' -->
+				<div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<% if user_signed_in? %>
+						<li class="active"><button type="button" class="btn btn-default btn-sm">Signed In as <%= link_to current_user.email %></button>
+							<%= form_for :session, url: destroy_user_session_path, method: 'delete' do |f| %>
+							<%= current_user.email %>
+							<button type="button" class="btn btn-default btn-sm">
+								<%= f.submit 'Sign Out', :class => 'button', id: 'signout' %> </button> </li>
+								<% end %>
+								<% else %>
+								<div>
+									<li class="active">
+										<%= link_to('Sign Up', new_user_registration_path )%></li>
+										<p>or</p>
+										<li class="active">
+											<%= link_to('Sign In', user_session_path ) %></li>
+										</div>
+										<% end %>
+									</ul>
+								</div>
+								<!-- end 'sign up and log in' button -->
+							</div>
+						</nav>
+						<!-- End Navigation Bar HTML -->
+						<div class="container"> 
+							<div class="devise-alert">
+							<p class="notice"><%= notice %></p>
+							<p class="alert"><%= alert %></p>
+							<%= yield %>
+						</div>
+						</div>
+				</body>
+				</html>
