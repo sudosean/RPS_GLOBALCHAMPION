@@ -1,6 +1,7 @@
-<h1>Rounds#show</h1>
-<p>Find me in app/views/rounds/show.html.erb</p>
+<!-- <h1>WELCOME TO GLOBAL CHAMPION</h1> -->
+<h2>Player 1: <%= User.find(@round.player_1_id).email %></h2>
+<h2>Player 2: <%= User.find(@round.player_2_id).email %></h2>
 
 <%= render "shared/choices_#{params[:controller]}" %>
 
-<%= link_to 'play again', new_round_path %>
+<%= link_to 'play next open game', new_round_path %>
