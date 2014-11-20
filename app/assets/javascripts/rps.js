@@ -9,9 +9,9 @@ var refreshPage = function(choice) {
     setTimeout(function() {
         compare(user, makeComputerChoice());
     }, 2600);//makes response stay on page, instead of going away
-    document.getElementById("fist_back").setAttribute("style", "margin-left: -50px;"); 
+    document.getElementById("fist_back").setAttribute; 
     document.getElementById("fist_back").src="assets/fist_back-01.png"; 
-    document.getElementById("fist_front").setAttribute("style", "margin-left: -50px;"); 
+    document.getElementById("fist_front").setAttribute; 
     document.getElementById("fist_front").src="assets/fist_front-01.png";
 } 
 
@@ -60,15 +60,15 @@ var compare = function(choice1, choice2) {   //choice 1 = user, choice 2 = compu
         if (choice2 === "rock") {
             document.getElementById("result").innerHTML = "You Win!";
             document.getElementById("fist_back").src="assets/luchador_paper.png";  //user choice paper
-            document.getElementById("fist_back").setAttribute("style", "margin-left: 50px;");  //user choice paper
+            document.getElementById("fist_back").setAttribute;  //user choice paper
             document.getElementById("fist_front").src="assets/luchador_rock.png";  //computer choice rock
-            document.getElementById("fist_front").setAttribute("style", "margin-left: 50px;");   //computer choice rock
+            document.getElementById("fist_front").setAttribute;   //computer choice rock
         } else if (choice2 === "scissors") {
             document.getElementById("result").innerHTML = "You Lose!";
             document.getElementById("fist_back").src="assets/luchador_paper.png"; 
-            document.getElementById("fist_back").setAttribute("style", "margin-left: 50px;");     //user choice paper
+            document.getElementById("fist_back").setAttribute;     //user choice paper
             document.getElementById("fist_front").src="assets/luchador_scissors.png";  //computer choice scissors
-            document.getElementById("fist_front").setAttribute("style", "margin-left: 50px;"); 
+            document.getElementById("fist_front").setAttribute; 
         }
     } else if (choice1 === "scissors") {
         if (choice2 === "rock") {
