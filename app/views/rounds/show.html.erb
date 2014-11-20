@@ -10,6 +10,8 @@
   <% end -%>
 </h2>
 
-<%= render "shared/choices_#{params[:controller]}" %>
+<% unless @round.player_2_id == nil || @round.player_1_id == nil %>
+  <%= render "shared/choices_#{params[:controller]}" %>
+<% end -%>
 
 <%= link_to 'play next open game', new_round_path %>

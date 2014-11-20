@@ -21,20 +21,20 @@
     <% end %>
   <% when "waiting" %>
     <p>waiting for other player</p>
+      <script>
+            var waitingInterval = setInterval(function() {
+              $.getJSON("<%= round_path(@round) %>", function(data) {
+                //generates: compare(data.round.player_1_hand, data.round.player_2_hand)
+                if (data.status === "complete") {
+                  clearInterval(waitingInterval);
+                  compare(<%= "data.#{hand_column}" %>, <%= "data.#{other_player_hand}" %>);
+                };
+              }).fail(function(){
+                console.log("errors getting show");
+              });
+            },1000)
+      </script>
 
-    <script>
-      var waitingInterval = setInterval(function() {
-        $.getJSON("<%= round_path(@round) %>", function(data) {
-          //generates: compare(data.round.player_1_hand, data.round.player_2_hand)
-          if (data.status === "complete") {
-            clearInterval(waitingInterval);
-            compare(<%= "data.#{hand_column}" %>, <%= "data.#{other_player_hand}" %>);
-          };
-        }).fail(function(){
-          console.log("errors getting show");
-        });
-      },1000)
-    </script>
   <% when "complete" %>
 
     <script>
@@ -42,3 +42,12 @@
     </script>
 
 <% end -%>
+<script>
+    if (data.player_2 == nil || data.player_1 == nil) {
+        var waitingInterval = setInterval(function() {
+
+          },1000)
+       };
+    };
+
+</script>
