@@ -1,8 +1,9 @@
-
 <!-- case statement for  -->
 <h2 id="result"></h2>
 <% player_number = @round.player_number(current_user) %>
-    <% hand_column = "player_#{player_number}_hand" %>
+<% hand_column = "player_#{player_number}_hand" %>
+<% other_player_number = ((player_number == 1) ? 2 : 1) %>
+<% other_player_hand = "player_#{other_player_number}_hand" %>
 <% case @round.status %>
   <% when "input" %>
     <!-- do this, but make partial later -->
@@ -20,10 +21,24 @@
     <% end %>
   <% when "waiting" %>
     <p>waiting for other player</p>
+
+    <script>
+      var waitingInterval = setInterval(function() {
+        $.getJSON("<%= round_path(@round) %>", function(data) {
+          //generates: compare(data.round.player_1_hand, data.round.player_2_hand)
+          if (data.status === "complete") {
+            clearInterval(waitingInterval);
+            compare(<%= "data.#{hand_column}" %>, <%= "data.#{other_player_hand}" %>);
+          };
+        }).fail(function(){
+          console.log("errors getting show");
+        });
+      },1000)
+    </script>
   <% when "complete" %>
-    <% other_player_number = ((player_number == 1) ? 2 : 1) %>
-    <% other_player_hand = "player_#{other_player_number}_hand" %>
+
     <script>
       compare('<%= @round.send(hand_column) %>', '<%= @round.send(other_player_hand) %>');
     </script>
+
 <% end -%>
