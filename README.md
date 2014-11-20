@@ -1,14 +1,19 @@
 GLOBAL CHAMPION
 ==================
+Are you a master at rock, paper, scissors? Are you ready for a challenge? Are you ready to become number one? Then play Global Champion! The ultimate multiplayer web/mobile app for extreme RPS players! Prepare for your minds to be blown!
+<br>
+<br>
 Play Global Champion here!: http://boiling-temple-3936.herokuapp.com/main
 <br>
-Are you a master at rock, paper, scissors? Are you ready for a challenge? Are you ready to become number one? Then play Global Champion! The ultimate multiplayer web/mobile app for extreme RPS players! Prepare for your minds to be blown!
 <br>
 Brought to you by the WDI3 Ultimate Steam State Machine Team: Sean, John, Stacy, Tim, and Max!
 <br>
+<br>
 ERD: coming soon...
 <br>
+<br>
 Wireframe: http://imgur.com/a/SUEXN
+<br>
 <br>
 Technologies:
 Ruby,
