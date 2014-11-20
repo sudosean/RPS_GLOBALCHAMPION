@@ -1,16 +1,16 @@
-RPS_GLOBALCHAMPION
+GLOBAL CHAMPION
 ==================
-http://boiling-temple-3936.herokuapp.com/main
+Play Global Champion here!: http://boiling-temple-3936.herokuapp.com/main
 <br>
-About:
+Are you a master at rock, paper, scissors? Are you ready for a challenge? Are you ready to become number one? Then play Global Champion! The ultimate multiplayer web/mobile app for extreme RPS players! Prepare for your minds to be blown!
 <br>
-ERD:
+Brought to you by the WDI3 Ultimate Steam State Machine Team: Sean, John, Stacy, Tim, and Max!
 <br>
-Wireframe: 
-* Game play: single screen play out
-* Pages/views: Game(Root) page, sign-up page, profile page
-* Color Scheme:
-* Technologies:
+ERD: coming soon...
+<br>
+Wireframe: http://imgur.com/a/SUEXN
+<br>
+Technologies:
 Ruby,
 Ruby on rails,
 Javascript,
@@ -18,8 +18,18 @@ Jquery,
 AJAX,
 Devise,
 Bootstrap,
-Paperclip
-
+Paperclip,
+Capybara,
+Turbolinks,
+Postgresql, 
+Selenium-Webdriver,
+Jasmine-rails,
+Rack-livereload,
+rb-readline
+<br>
+Special thanks to Matt, Jeff, and Randy...masters of awesome
+<br>
+==================
 Daily schedule:
 * Saturday: User story #2 due, deploy at 3pm  
 * Sunday: 1/3 images complete
