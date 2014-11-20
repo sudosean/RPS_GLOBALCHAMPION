@@ -6,7 +6,9 @@
 <!-- <button onClick='window.location.reload(true)' class="btn" name="button">Play Again</button> -->
 <div class="results-container">
     <p id="result"></p>
-    <p><%= link_to 'play multiplayer', new_round_path %></p>
 </div>
 <!-- <button class="btn" name="button">Sign up</button> -->
 <%= render "shared/arms" %>
+<ul class="bottom-navigation">
+  <li><%= link_to 'play multiplayer', new_round_path %></li>
+</ul>

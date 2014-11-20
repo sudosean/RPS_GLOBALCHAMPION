@@ -80,3 +80,7 @@ img {
 .lucador-right {
   @extend .row;
 }
+
+.bottom-navigation {
+  @extend .pager;
+}
