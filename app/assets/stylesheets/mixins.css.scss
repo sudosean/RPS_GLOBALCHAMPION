@@ -1,5 +1,10 @@
+
+  .headline {
+    @extend .text-center;
+  }
 #choices {
   @extend .col-md-12;
+
 }
 // #rock_img {
 //   @include background-image: url(circle.png);
@@ -8,49 +13,63 @@
   @extend .col-md-12;
 }
 
-.login {
-  // background: #FFCC99;
-  // position: absolute;
-  // left: 50%;
-  // margin-left: -200px;
-  text-align: center;
-}
-.weapons{
-  // background: #FF9999;
-  text-align: center;
-}
-.playagain {
-  // background: #FFCC66;
-  text-align: center;
+.weapons {
+  @extend .row;
+  // #choices {
+  //   @extend .col-md-12;
+  // }
 }
 
-.navbar {
-  background: #000000;
+.notice {
+  @extend .alert;
+  @extend .alert-info;
 }
 
-#arms-container {
-  background-color: red;
-  height: 470px;
-  width: 900px;
-  margin: 0 auto;
+.alert {
+  @extend .alert; 
+  @extend .alert-warning;
 }
 
-#left-arm img {
-  // background-color:;
-  float: left;
-  height: 470px;
-  width: 450px;
+.arms-container {
+  @extend .row;
+  .left-arm, .right-arm {
+    @extend .col-xs-6;
+
+    #fist-front, #fist-back{
+        @extend .center-block;
+    }
+  }
 
 }
 
-#right-arm img{
-  // background-color: ;
-  float: right;
-  height: 470px;
-  width: 450px;
+.results-container {
+  @extend .row;
+  #result {
+    @extend .col-xs-12;
+    @extend .text-center;
+  }
 }
 
-#choices img {
-  height: 200px;
-  width: 150px;
+.devise-alert {
+  @extend .row;
 }
+
+img {
+  @extend .img-responsive;
+}
+
+.rock_button{
+  @extend .col-xs-4;
+}
+.paper_button{
+  @extend .col-xs-4;
+}
+.scissors_button{
+  @extend .col-xs-4;
+}
+
+.headline {
+  @extend .col-xs-12
+  ;
+}
+

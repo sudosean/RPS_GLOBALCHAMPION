@@ -1,0 +1,8 @@
+<div class="choices">
+
+    <button onClick='refreshPage("rock");' class='btn' id="rock_button"><img src="assets/luchador_rock.png"></button>
+
+    <button onClick='refreshPage("paper");'class='btn' id="paper_button"><img src="assets/luchador_paper.png">Paper</button>
+
+    <button onClick='refreshPage("scissors");'class='btn' id="scissors_button"><img src="assets/luchador_scissors.png">Scissors</button>
+</div>
