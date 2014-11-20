@@ -44,7 +44,7 @@
 
 .results-container {
   @extend .row;
-  #result {
+  p, #result {
     @extend .col-xs-12;
     @extend .text-center;
   }
