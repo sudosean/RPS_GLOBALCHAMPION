@@ -61,7 +61,12 @@
 						</div>
 						<div class="container"> 
 							<div class="devise-alert">
-							<p class="notice alert"><%= notice %> <%= alert %></p>
+							<% unless notice == nil %>
+								<p class="notice"><%= notice %></p>
+							<% end %>
+								<% unless alert == nil %>
+								<p class="alert"><%= alert %></p>
+							<% end %>
 							<%= yield %>
 						</div>
 					</div>
