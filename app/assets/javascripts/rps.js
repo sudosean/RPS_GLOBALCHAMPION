@@ -9,10 +9,14 @@ var refreshPage = function(choice) {
     setTimeout(function() {
         compare(user, makeComputerChoice());
     }, 2600);//makes response stay on page, instead of going away
-    document.getElementById("fist_back").setAttribute; 
-    document.getElementById("fist_back").src="assets/fist_back-01.png"; 
-    document.getElementById("fist_front").setAttribute; 
-    document.getElementById("fist_front").src="assets/fist_front-01.png";
+    $("#fist_back").removeClass("hidden");
+    $("#fist_front").removeClass("hidden");
+    $("#mask-rock-l").addClass("hidden"); 
+    $("#mask-rock-r").addClass("hidden");
+    $("#mask-paper-l").addClass("hidden");
+    $("#mask-paper-r").addClass("hidden");
+    $("#mask-scissors-r").addClass("hidden");
+    $("#mask-scissors-l").addClass("hidden");
 } 
 
 
@@ -37,50 +41,63 @@ var compare = function(choice1, choice2) {   //choice 1 = user, choice 2 = compu
     if (choice1 === choice2) {
         document.getElementById("result").innerHTML = "Tie!";
         if (choice1 === "rock" && choice2 === "rock") {
-            document.getElementById("fist_back").style.display='none';
-            document.getElementById("fist_front").style.display='none';
-            document.getElementById("mask-rock-l").style.visibility='visible';
-            document.getElementById("mask-rock-r").style.visibility='visible';
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-rock-l").removeClass("hidden");
+            $("#mask-rock-r").removeClass("hidden");
         } else if (choice1 === "paper" && choice2 === "paper"){
-            document.getElementById("fist_back").src="assets/luchador_paper.png";
-            document.getElementById("fist_front").src="assets/luchador_paper.png";
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-paper-l").removeClass("hidden");
+            $("#mask-paper-r").removeClass("hidden");
         } else {
-            document.getElementById("fist_back").src="assets/luchador_scissors.png";
-            document.getElementById("fist_front").src="assets/luchador_scissors.png";
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-scissors-l").removeClass("hidden");
+            $("#mask-scissors-r").removeClass("hidden");
         }
     } else if (choice1 === "rock") {
         if (choice2 === "scissors") {
             document.getElementById("result").innerHTML = "You Win!";
-            document.getElementById("fist_back").src="assets/luchador_rock.png";     //user choice rock
-            document.getElementById("fist_front").src="assets/luchador_scissors.png"; //computer choice scissors
+            $("#fist_back").addClass("hidden");                     
+            $("#fist_front").addClass("hidden");                    
+            $("#mask-rock-l").removeClass("hidden");        //user choice rock
+            $("#mask-scissors-r").removeClass("hidden");    //computer choice scissors
         } else {
             document.getElementById("result").innerHTML = "You Lose!";
-            document.getElementById("fist_back").src="assets/luchador_rock.png";   //user choice rock
-            document.getElementById("fist_front").src="assets/luchador_paper.png"; //computer choice paper
+            $("#fist_back").addClass("hidden");     
+            $("#fist_front").addClass("hidden");    
+            $("#mask-rock-l").removeClass("hidden");        //user choice rock
+            $("#mask-paper-r").removeClass("hidden");       //computer choice paper
         }
     } else if (choice1 === "paper") {
         if (choice2 === "rock") {
             document.getElementById("result").innerHTML = "You Win!";
-            document.getElementById("fist_back").src="assets/luchador_paper.png";  //user choice paper
-            document.getElementById("fist_back").setAttribute;  //user choice paper
-            document.getElementById("fist_front").src="assets/luchador_rock.png";  //computer choice rock
-            document.getElementById("fist_front").setAttribute;   //computer choice rock
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-paper-l").removeClass("hidden");   //user choice paper
+            $("#mask-rock-r").removeClass("hidden");  //computer choice rock
         } else if (choice2 === "scissors") {
             document.getElementById("result").innerHTML = "You Lose!";
-            document.getElementById("fist_back").src="assets/luchador_paper.png"; 
-            document.getElementById("fist_back").setAttribute;     //user choice paper
-            document.getElementById("fist_front").src="assets/luchador_scissors.png";  //computer choice scissors
-            document.getElementById("fist_front").setAttribute; 
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-paper-l").removeClass("hidden");       //user choice paper
+            $("#mask-scissors-r").removeClass("hidden");        //computer choice scissors
+
         }
     } else if (choice1 === "scissors") {
         if (choice2 === "rock") {
-            document.getElementById("result").innerHTML = "You Lose!";                  
-            document.getElementById("fist_back").src="assets/luchador_scissors.png";    //user choice scissors
-            document.getElementById("fist_front").src="assets/luchador_rock.png";       //computer choice rock
+            document.getElementById("result").innerHTML = "You Lose!";
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");                  
+            $("#mask-scissors-l").removeClass("hidden");               //user choice scissors
+            $("#mask-rock-r").removeClass("hidden");       //computer choice rock
         } else if (choice2 === "paper") {
-            document.getElementById("result").innerHTML = "You Win!";                   
-            document.getElementById("fist_back").src="assets/luchador_scissors.png";    //user choice scissors
-            document.getElementById("fist_front").src="assets/luchador_paper.png";      //computer choice paper        
+            document.getElementById("result").innerHTML = "You Win!";
+            $("#fist_back").addClass("hidden");
+            $("#fist_front").addClass("hidden");
+            $("#mask-scissors-l").removeClass("hidden");               //user choice scissors
+            $("#mask-paper-r").removeClass("hidden");      //computer choice paper        
         }
     } else {
         document.getElementById("result").innerHTML = "ERROR!";
