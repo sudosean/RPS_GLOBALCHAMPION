@@ -8,23 +8,7 @@
     <p id="result"></p>
 </div>
 <!-- <button class="btn" name="button">Sign up</button> -->
-<div class="arms-container">
-    <div class="left-arm">
-    	<div class="lucador-left"> 
-    		<div id="mask-rock-l" class="hidden"><img src="assets/luchador_rock.png"></div>
-    		<div id="mask-paper-l" class="hidden" ><img src="assets/luchador_paper.png"></div>
-    		<div id="mask-scissors-l" class="hidden" ><img src="assets/luchador_scissors.png"></div>
-        </div>
-        <img id="fist_back" src="assets/fist_back-01.png" alt="left arm">
-    </div>
-    <div class="right-arm">
-    	<div class="lucador-right">
-    		<div id="mask-rock-r" class="hidden" ><img src="assets/luchador_rock.png"></div>
-    		<div id="mask-paper-r" class="hidden" ><img src="assets/luchador_paper.png"></div>
-    		<div id="mask-scissors-r" class="hidden" ><img src="assets/luchador_scissors.png"></div>
-    	</div>
-        <img id="fist_front" src="assets/fist_front-01.png" alt="right arm">
-    </div>
-</div>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<%= render "shared/arms" %>
+<ul class="bottom-navigation">
+  <li><%= link_to 'play multiplayer', new_round_path %></li>
+</ul>

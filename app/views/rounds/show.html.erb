@@ -12,4 +12,8 @@
 
 <%= render "shared/choices_#{params[:controller]}" %>
 
-<%= link_to 'play next open game', new_round_path %>
+<%= render "shared/arms" %>
+<ul class="bottom-navigation">
+  <li><%= link_to 'play next open game', new_round_path %></li>
+  <li><%= link_to 'play alone', root_path %></li>
+</ul>
