@@ -37,8 +37,10 @@ var compare = function(choice1, choice2) {   //choice 1 = user, choice 2 = compu
     if (choice1 === choice2) {
         document.getElementById("result").innerHTML = "Tie!";
         if (choice1 === "rock" && choice2 === "rock") {
-            document.getElementById("fist_back").src="assets/luchador_rock.png";
-            document.getElementById("fist_front").src="assets/luchador_rock.png";
+            document.getElementById("fist_back").style.display='none';
+            document.getElementById("fist_front").style.display='none';
+            document.getElementById("mask-rock-l").style.visibility='visible';
+            document.getElementById("mask-rock-r").style.visibility='visible';
         } else if (choice1 === "paper" && choice2 === "paper"){
             document.getElementById("fist_back").src="assets/luchador_paper.png";
             document.getElementById("fist_front").src="assets/luchador_paper.png";
