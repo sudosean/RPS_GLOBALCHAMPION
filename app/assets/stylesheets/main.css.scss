@@ -84,3 +84,62 @@
   margin-top: -30px;
 }
 
+#mask-rock-l {
+	display: block;
+	padding-right: 15px;
+		img {
+			float: right;
+		}
+	// visibility: hidden;
+}
+
+#mask-paper-l {
+	display: block;
+	padding-right: 15px;
+		img {
+			float: right;
+		}
+	// margin: 0 auto;
+	// visibility: hidden;
+}
+
+#mask-scissors-l {
+	display: block;
+	padding-right: 15px;
+		img {
+			float: right;
+		}
+}
+#mask-rock-r {
+	display: block;
+		img {
+			float: left;
+		}	
+	// visibility: hidden;
+}
+
+#mask-paper-r {
+	display: block;
+		img {
+			float: left;
+		}
+}
+
+#mask-scissors-r {
+	display: block;
+		img {
+			float: left;
+		}
+}
+
+#fist_front {
+	// visibility: visible;
+}
+
+#fist_back {
+	// visibility: visible;
+}
+
+// .hidden {
+	// visibility: hidden;
+// }

@@ -32,9 +32,9 @@
             $('#fist_front').animate({
                 'marginTop': "+=30px",
             });
-            $('#fist_back').animate({
-                'marginTop': "-=30px"
-            });
+            // $('#fist_back').animate({
+            //     'marginTop': "-=30px"
+            // });
             // $('#fist_front').animate({
             //     'marginTop': "-=30px",
             // });

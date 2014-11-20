@@ -73,3 +73,10 @@ img {
   ;
 }
 
+.lucador-left {
+  @extend .row;
+}
+
+.lucador-right {
+  @extend .row;
+}
