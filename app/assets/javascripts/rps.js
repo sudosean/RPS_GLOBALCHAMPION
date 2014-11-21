@@ -11,6 +11,8 @@ var refreshPage = function(choice) {
     }, 2600);//makes response stay on page, instead of going away
     $("#fist_back").removeClass("hidden");
     $("#fist_front").removeClass("hidden");
+    $('#fist_back').animate({'marginTop': "-=30px"});
+    $('#fist_front').animate({'marginTop': "-=30px"});
     $("#mask-rock-l").addClass("hidden"); 
     $("#mask-rock-r").addClass("hidden");
     $("#mask-paper-l").addClass("hidden");
